@@ -1,6 +1,6 @@
 const PortfolioItems = ({ data }) => {
   return (
-    <div className="mb-16 gap-10 laptop:grid laptop:grid-cols-2 shadow-lg py-8 px-4 rounded-xl border-b-2 border-solid border-wheat-400">
+    <div className="mb-16 gap-10 laptop:grid laptop:grid-cols-2 py-8 px-4 rounded-xl border-2 shadow-lg border-solid border-wheat-400">
       <div className="mb-8 laptop:mb-0 h-full  rounded-lg">
         <img src={data?.img} alt="" className="rounded-lg h-full" />
       </div>

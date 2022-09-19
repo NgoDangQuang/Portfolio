@@ -1,8 +1,19 @@
 import SocialMedia from "../SocialMedia";
 import avt from "./../../asset/avt.jpg";
 const Home = () => {
+  const goToSection = (data) => {
+    const element = document.getElementById(data);
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest",
+    });
+  };
   return (
-    <section className="laptop:flex laptop:justify-center laptop:items-center laptop:gap-20 my-16 laptop:px-16 mt-32" id='home'>
+    <section
+      className="laptop:flex laptop:justify-center laptop:items-center laptop:gap-20 my-16 laptop:px-16 mt-32"
+      id="home"
+    >
       <div className="text-center my-12">
         <h1 className="text-[42px] mb-4 font-bold tracking-widest">
           I'm A Web Developer
@@ -11,8 +22,12 @@ const Home = () => {
           I love Building Beautiful Web Experience
         </p>
         <div className="flex justify-center gap-4 font-bold">
-          <button className="btn-click">ABOUT ME</button>
-          <button className="btn-click">PORTFOLIO</button>
+          <button className="btn-click" onClick={() => goToSection("about-me")}>
+            ABOUT ME
+          </button>
+          <button className="btn-click" onClick={() => goToSection("portfolio")}>
+            PORTFOLIO
+          </button>
         </div>
         <SocialMedia />
       </div>
